@@ -15,6 +15,13 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 noise opacity-[0.015] pointer-events-none" />
 
       <div className="container-xl">
+        {/* SEO H1 — visually hidden, read by search engines and assistive tech */}
+        <h1 className="sr-only">
+          Prashant Kushwaha — Senior Software Engineer (SDE-2) at Atlassian. Ex-Blinkit, Razorpay.
+          Frontend-focused full-stack developer specializing in React, Next.js, TypeScript, and web
+          performance. Based in Bengaluru, India. Available for contract and full-time roles.
+        </h1>
+
         {/* Status pill */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -35,8 +42,8 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Headline */}
-        <motion.h1
+        {/* Visual headline (H2 — H1 is the SEO one above) */}
+        <motion.h2
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
@@ -45,7 +52,7 @@ export default function Hero() {
           Senior software engineer building
           <br className="hidden md:block" />{" "}
           <span className="gradient-text">products people trust.</span>
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
